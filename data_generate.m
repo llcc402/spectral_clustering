@@ -16,9 +16,9 @@ sigma = 0.1;
 
 for i = 1:K
     r = i;
-    theta = rand(1, 1000) * 2 * pi;
-    data((i*N-N)+1 : i*N, 1) = r * cos(theta) + randn(1, 1000) * sigma;
-    data((i*N-N)+1 : i*N, 2) = r * sin(theta) + randn(1, 1000) * sigma;
+    theta = rand(1, N) * 2 * pi;
+    data((i*N-N)+1 : i*N, 1) = r * cos(theta) + randn(1, N) * sigma;
+    data((i*N-N)+1 : i*N, 2) = r * sin(theta) + randn(1, N) * sigma;
 end
 
 plot(data(:,1), data(:,2), '.')
